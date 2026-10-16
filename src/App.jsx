@@ -7,16 +7,19 @@ import NavBar from './Component/NavBar'
 import Core from './Component/Core'
 import Footer from './Component/Footer'
 import Demo from './Component/Demo';
+import {BrowserRouter} from "react-router";
 function App() {
   const [activepage,setActive]=useState("default");
   
 
   return (
     <>
+    <BrowserRouter>
     <NavBar onLinkclick={setActive}/>
     <Core currentPage={activepage}/>
     <Footer/> 
-    <Demo/>
+    </BrowserRouter>
+    {/* <Demo/> */}
     </>
   )
 }

@@ -3,15 +3,16 @@ import "./Core.css";
 import Movies from './Movies';
 import Theatres from './Theatres';
 import Offers from './Offers';
+import AppRoutes from './AppRoutes';
 
 function Core({currentPage}) {
     return (
         <>
-        {currentPage === "default" && (<main className="under-construction">
+        {/* {currentPage === "default" && (<main className="under-construction">
             <div className="construction-icon">🚧</div>
 
             <h1>
-                 Page Under <span>Construction</span>
+                 Page Under <span>Construction </span>
             </h1>
 
             <p>
@@ -24,10 +25,10 @@ function Core({currentPage}) {
             </div>
 
             <h3>Coming Soon...</h3>
-        </main>)}
-        {currentPage === "Movies" && (<Movies/>)}
+        </main>)} */}
+        {/* {currentPage === "Movies" && (<Movies/>)}
         {currentPage === "Theatres" && (<Theatres/>)}
-        {currentPage === "Offers" && (<Offers/>)}
+        {currentPage === "Offers" && (<Offers/>)} */}
         {/* <main className="construction-main">
             <div className="construction-content">
 
@@ -61,6 +62,8 @@ function Core({currentPage}) {
 
             </div>
         </main> */}
+        <AppRoutes/>
+
         </>
     );
 }
