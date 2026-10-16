@@ -8,7 +8,7 @@ import Core from './Component/Core'
 import Footer from './Component/Footer'
 import Demo from './Component/Demo';
 function App() {
-  const [activepage,setActive]=useState("Movies");
+  const [activepage,setActive]=useState("default");
   
 
   return (
