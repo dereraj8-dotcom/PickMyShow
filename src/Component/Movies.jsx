@@ -3,6 +3,7 @@
 
 function Movies() {
     return (
+        <>
         <main className="under-construction">
             <div className="construction-icon">🚧</div>
 
@@ -21,6 +22,7 @@ function Movies() {
 
             <h3>Coming Soon...</h3>
         </main>
+        </>
     );
 }
 

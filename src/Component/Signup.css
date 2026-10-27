@@ -1,0 +1,122 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 30px 15px;
+    color: #333;
+}
+
+/* Signup Form */
+form {
+    background-color: white;
+    max-width: 450px;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Labels */
+form label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #374151;
+}
+
+/* Input Fields */
+form input[type="email"],
+form input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Input Focus */
+form input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Buttons */
+form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Register Button */
+form button[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+    margin-right: 8px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+/* Clear Button */
+form button[type="reset"] {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+form button[type="reset"]:hover {
+    background-color: #d1d5db;
+}
+
+/* Login Link Section */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body > p,
+p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Horizontal Line */
+hr {
+    display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form button {
+        width: 100%;
+        margin-right: 0;
+    }
+}

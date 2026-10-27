@@ -8,15 +8,15 @@ function NavBar({onLinkclick}){
 
         <ul class="nav-links">
             <li><Link to ="/">Home</Link></li>
-            <li><a href="Movies" onClick={(e)=>{e.preventDefault();onLinkclick("Movies")}}>Movies</a></li>
-            <li><a href="/Theatres" onClick={(e)=>{e.preventDefault();onLinkclick("Theatres")}}>Theatres</a></li>
-            <li><a href="/Offers" onClick={(e)=>{e.preventDefault();onLinkclick("Offers")}}>Offers</a></li>
+            <li><Link to ="/Movies">Movies</Link></li>
+            <li><Link to ="/Theatres" >Theatres</Link></li>
+            <li><Link to ="/Offers" >Offers</Link></li>
             <li><Link to ="/Contact">Contact</Link></li>
         </ul>
 
         <div class="nav-buttons">
-            <Link href="" class="login">Login</Link>
-            <Link href="" class="register">Register</Link>
+            <Link to ="/Login" className="login-btn">Login</Link>
+            <Link to ="/Signup" className="Signup-btn">Signup</Link>
         </div>
     </nav>
     </>
