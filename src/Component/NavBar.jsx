@@ -3,10 +3,10 @@ import { Link } from "react-router";
 function NavBar({onLinkclick}){
     return(
     <>
-   <nav class="navbar">
-        <a href="/" class="logo">Pick<span>MyShow</span></a>
+   <nav className="navbar">
+        <a href="/" className="logo">Pick<span>MyShow</span></a>
 
-        <ul class="nav-links">
+        <ul className="nav-links">
             <li><Link to ="/">Home</Link></li>
             <li><Link to ="/Movies">Movies</Link></li>
             <li><Link to ="/Theatres" >Theatres</Link></li>
@@ -14,7 +14,7 @@ function NavBar({onLinkclick}){
             <li><Link to ="/Contact">Contact</Link></li>
         </ul>
 
-        <div class="nav-buttons">
+        <div className="nav-buttons">
             <Link to ="/Login" className="login-btn">Login</Link>
             <Link to ="/Signup" className="Signup-btn">Signup</Link>
         </div>

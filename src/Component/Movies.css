@@ -1,0 +1,282 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.movies-page {
+    min-height: 100vh;
+    background: #f7f5fa;
+    font-family: Arial, sans-serif;
+    color: #282033;
+}
+
+/* Hero Section */
+
+.movies-hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(120deg, #251936, #56315f, #251936);
+    color: white;
+}
+
+.movies-hero span,
+.movie-section-heading span {
+    color: #e84c9a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.movies-hero h1 {
+    font-size: 38px;
+    margin: 18px 0;
+}
+
+.movies-hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #ddd3e4;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* Search and Filter */
+
+.movie-filter-section {
+    padding: 35px 8%;
+}
+
+.movie-search-box {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #e4dce9;
+    border-radius: 8px;
+    padding: 0 18px;
+}
+
+.movie-search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 5px;
+    font-size: 14px;
+    background: transparent;
+    color: #282033;
+}
+
+.movie-search-box span {
+    font-size: 20px;
+}
+
+.genre-section {
+    margin-top: 35px;
+}
+
+.genre-section h3 {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+.genre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.genre-btn {
+    padding: 10px 22px;
+    background: white;
+    border: 1px solid #ded5e5;
+    border-radius: 25px;
+    color: #352b40;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.genre-btn:hover,
+.genre-btn.selected {
+    background: #e84c9a;
+    color: white;
+    border-color: #e84c9a;
+}
+
+/* Movie Sections */
+
+.movie-list-section {
+    padding: 20px 8% 45px;
+}
+
+.movie-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.movie-section-heading h2 {
+    font-size: 27px;
+    margin-top: 8px;
+}
+
+.movie-section-heading > p {
+    color: #777080;
+    font-size: 14px;
+}
+
+/* Movie Grid */
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.movie-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px #21132a12;
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px #21132a20;
+}
+
+.movie-image {
+    height: 310px;
+    position: relative;
+    overflow: hidden;
+    background: #e5dce9;
+}
+
+.movie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.movie-card:hover .movie-image img {
+    transform: scale(1.05);
+}
+
+.movie-rating {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #21172eea;
+    color: #ffd34e;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.upcoming-label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    background: #e84c9a;
+    color: white;
+    padding: 7px 10px;
+    font-size: 11px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.movie-info {
+    padding: 17px;
+}
+
+.movie-info h3 {
+    font-size: 17px;
+    margin-bottom: 9px;
+}
+
+.movie-info p {
+    color: #81788a;
+    font-size: 13px;
+    margin-bottom: 17px;
+}
+
+.movie-book-btn {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 5px;
+    background: #e84c9a;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.movie-book-btn:hover {
+    background: #c52e7c;
+}
+
+.upcoming-section {
+    background: #eeeaf3;
+    padding-top: 40px;
+}
+
+.no-movies {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 35px;
+    color: #81788a;
+    font-size: 15px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1000px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .movies-hero h1 {
+        font-size: 29px;
+    }
+
+    .movie-filter-section,
+    .movie-list-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .movie-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 420px) {
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-image {
+        height: 350px;
+    }
+
+    .movie-section-heading h2 {
+        font-size: 22px;
+    }
+}

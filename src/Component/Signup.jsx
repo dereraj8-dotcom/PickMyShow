@@ -36,7 +36,7 @@ else{
             <form  method="POST" onSubmit={registerUser}>
 
                 <label htmlFor="email">Email Address:</label>
-                <br />
+                
                 <input
                     type="email"
                     id="email"
@@ -45,10 +45,10 @@ else{
                     placeholder="Enter your email"
                     required onChange={(e)=>{e.preventDefault(); setEmail(e.target.value)}}
                 />
-                <br />
+    
 
                 <label htmlFor="password">Password:</label>
-                <br />
+                
                 <input
                     type="password"
                     id="password"
@@ -58,12 +58,12 @@ else{
                     required
                     minLength={4} onChange={(e)=>{e.preventDefault();setPassword(e.target.value) }}
                 />
-                <br />
+            
 
                 <label htmlFor="confirmPassword">
                     Confirm Password:
                 </label>
-                <br />
+                
                 <input
                     type="password"
                     id="confirmPassword"

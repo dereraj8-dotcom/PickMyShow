@@ -1,122 +1,123 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page layout */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    margin: 0;
-    padding: 30px 15px;
+    background: #f3f6fc;
     color: #333;
 }
 
-/* Signup Form */
+/* Registration form */
 form {
-    background-color: white;
-    max-width: 450px;
-    margin: 25px auto;
+    width: 100%;
+    max-width: 420px;
+    margin: 60px auto 20px;
     padding: 30px;
+    background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
 }
 
 /* Labels */
 form label {
-    display: inline-block;
+    display: block;
     margin-bottom: 8px;
-    font-weight: bold;
     font-size: 14px;
-    color: #374151;
+    font-weight: 600;
+    color: #26354d;
 }
 
-/* Input Fields */
-form input[type="email"],
-form input[type="password"] {
+/* Input fields */
+form input {
     display: block;
     width: 100%;
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 1px solid #d1d5db;
+    height: 44px;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d0d7e2;
     border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 14px;
     outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 14px;
+    /* background: #ffffff; */
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Input Focus */
+/* Input focus */
 form input:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: #4169e1;
+    box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.12);
 }
 
 /* Buttons */
 form button {
-    padding: 12px 20px;
+    width: 100%;
+    height: 44px;
+    margin-top: 8px;
     border: none;
     border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    transition: background 0.2s;
 }
 
-/* Register Button */
+/* Register button */
 form button[type="submit"] {
-    background-color: #2563eb;
+    background: #4169e1;
     color: white;
-    margin-right: 8px;
 }
 
 form button[type="submit"]:hover {
-    background-color: #1d4ed8;
+    background: #3154bd;
 }
 
-/* Clear Button */
+/* Clear button */
 form button[type="reset"] {
-    background-color: #e5e7eb;
-    color: #374151;
+    background: #e9edf5;
+    color: #26354d;
 }
 
 form button[type="reset"]:hover {
-    background-color: #d1d5db;
+    background: #dce3ef;
 }
 
-/* Login Link Section */
-a {
-    color: #2563eb;
+/* Horizontal line */
+hr {
+    width: 90%;
+    max-width: 420px;
+    margin: 25px auto;
+    border: none;
+    border-top: 1px solid #dce2ec;
+}
+
+/* Login link section */
+p {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+p a {
+    color: #4169e1;
+    font-weight: 600;
     text-decoration: none;
-    font-weight: bold;
 }
 
-a:hover {
+p a:hover {
     text-decoration: underline;
 }
 
-body > p,
-p {
-    text-align: center;
-    color: #666;
-    font-size: 14px;
-    margin-top: 20px;
-}
-
-/* Horizontal Line */
-hr {
-    display: none;
-}
-
-/* Mobile Responsive */
+/* Mobile responsive */
 @media (max-width: 480px) {
-    body {
-        padding: 20px 12px;
-    }
-
     form {
-        padding: 20px;
-    }
-
-    form button {
-        width: 100%;
-        margin-right: 0;
+        width: calc(100% - 32px);
+        margin: 30px auto 20px;
+        padding: 24px;
     }
 }
