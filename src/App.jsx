@@ -8,6 +8,7 @@ import Core from './Component/Core'
 import Footer from './Component/Footer'
 import Demo from './Component/Demo';
 import {BrowserRouter} from "react-router";
+import AppRoutes from "./AppRoutes";
 function App() {
   const [activepage,setActive]=useState("default");
   
