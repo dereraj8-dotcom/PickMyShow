@@ -1,0 +1,213 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.welcome-page {
+    min-height: 100vh;
+    background: #171323;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+
+.welcome-navbar {
+    height: 85px;
+    padding: 0 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #171323;
+    border-bottom: 1px solid #30263f;
+}
+
+.welcome-logo {
+    color: white;
+    font-size: 27px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.welcome-logo span {
+    color: #e84c9a;
+}
+
+.welcome-auth {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.welcome-login {
+    color: white;
+    text-decoration: none;
+}
+
+.welcome-signup {
+    background: #e84c9a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.welcome-signup:hover {
+    background: #d52d82;
+}
+
+/* Hero */
+
+.welcome-hero {
+    min-height: calc(100vh - 85px);
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23,19,35,0.98) 5%,
+            rgba(23,19,35,0.85) 45%,
+            rgba(23,19,35,0.35) 100%
+        ),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1800")
+        center/cover no-repeat;
+}
+
+/* Content */
+
+.welcome-content {
+    max-width: 700px;
+    animation: fadeUp 1s ease;
+}
+
+.welcome-tag {
+    color: #e84c9a;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.welcome-content h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.15;
+    margin: 25px 0;
+    font-weight: 800;
+}
+
+.welcome-content h1 span {
+    color: #e84c9a;
+}
+
+.welcome-content p {
+    max-width: 560px;
+    color: #c5bfd0;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Button */
+
+.welcome-buttons {
+    margin-top: 35px;
+}
+
+.welcome-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: #e84c9a;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.welcome-btn:hover {
+    background: #d52d82;
+    transform: translateY(-4px);
+    color: white;
+}
+
+/* Bottom Text */
+
+.welcome-bottom-text {
+    margin-top: 45px;
+    color: #aaa2b8;
+    font-size: 13px;
+}
+
+.welcome-bottom-text i {
+    color: #e84c9a;
+    margin-right: 8px;
+}
+
+/* Scroll Icon */
+
+.welcome-scroll {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e84c9a;
+    font-size: 22px;
+}
+
+/* Animation */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width: 600px) {
+
+    .welcome-navbar {
+        padding: 0 6%;
+        height: 75px;
+    }
+
+    .welcome-logo {
+        font-size: 22px;
+    }
+
+    .welcome-auth {
+        gap: 15px;
+    }
+
+    .welcome-hero {
+        min-height: calc(100vh - 75px);
+        padding: 50px 7%;
+        background-position: center;
+    }
+
+    .welcome-content h1 {
+        font-size: 42px;
+    }
+
+    .welcome-content p {
+        font-size: 14px;
+    }
+
+    .welcome-tag {
+        font-size: 10px;
+    }
+}

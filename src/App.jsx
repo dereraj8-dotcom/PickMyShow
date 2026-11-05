@@ -7,8 +7,8 @@ import NavBar from './Component/NavBar'
 import Core from './Component/Core'
 import Footer from './Component/Footer'
 import Demo from './Component/Demo';
-import {BrowserRouter} from "react-router";
-import AppRoutes from "./AppRoutes";
+import {BrowserRouter} from "react-router-dom";
+import UserProvider from './Component/UserProvider';
 function App() {
   const [activepage,setActive]=useState("default");
   
@@ -16,9 +16,12 @@ function App() {
   return (
     <>
     <BrowserRouter>
+    <UserProvider> 
+      
     <NavBar onLinkclick={setActive}/>
     <Core currentPage={activepage}/>
     <Footer/> 
+    </UserProvider>
     </BrowserRouter>
     {/* <Demo/> */}
     </>

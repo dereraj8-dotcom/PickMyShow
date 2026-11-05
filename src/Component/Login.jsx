@@ -1,13 +1,16 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './Login.css';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
+import {UserContext} from './UserProvider';
+import Contact from './Contact';
 
 function Login (){
 const [email,setEmail] =useState('');
 const [password,setPassword] =useState('');
 const navigate= useNavigate();
 
+const {user,setUser}= useContext(UserContext);
 
 const loginUSer =async(e)=>{
     e.preventDefault();
@@ -19,6 +22,13 @@ const loginUSer =async(e)=>{
     if(res.status === 200){
         sessionStorage.setItem("email",email);
         alert("Login Successfull")
+        setUser({
+            ...user,
+            
+            username:res.data.username,
+            email:res.data.email,
+            contact:res.data.contact
+        })
         navigate("/");
     }
       } catch (error) {

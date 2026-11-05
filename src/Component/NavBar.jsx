@@ -1,12 +1,16 @@
 import  './NavBar.css';
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import {UserContext} from './UserProvider';
+import { useContext } from 'react';
 function NavBar({onLinkclick}){
+    const {user} =useContext(UserContext);
     return(
     <>
    <nav className="navbar">
         <a href="/" className="logo">Pick<span>MyShow</span></a>
 
         <ul className="nav-links">
+            <li>{user.username}</li> 
             <li><Link to ="/">Home</Link></li>
             <li><Link to ="/Movies">Movies</Link></li>
             <li><Link to ="/Theatres" >Theatres</Link></li>

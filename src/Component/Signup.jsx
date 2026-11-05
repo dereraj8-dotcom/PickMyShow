@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './Signup.css';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
+    const [fullName,setFullname]=useState('');
     const [email,setEmail]=useState('');
+    const [phoneNumber,setPhonenumber]=useState('');
      const [password,setPassword]=useState('');
       const [confirmpassword,setConfirmpassword]=useState('');
       const navigate = useNavigate();
@@ -16,7 +18,9 @@ function Signup() {
             method:"post",
             headers:{"content-type":"application/json"},
             body:JSON.stringify({
+                fullName:fullName,
                 email:email,
+                phoneNumber:phoneNumber,
                 password:password
             })
         });
@@ -35,6 +39,19 @@ else{
         <>
             <form  method="POST" onSubmit={registerUser}>
 
+                <label htmlFor="confirmPassword">
+                    Enter Full Name:
+                </label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    className="fullName"
+                    placeholder="Enter your Name"
+                    required
+                    minLength={4} onChange={(e)=>{e.preventDefault();setFullname(e.target.value)}}
+                />
+
                 <label htmlFor="email">Email Address:</label>
                 
                 <input
@@ -44,6 +61,18 @@ else{
                     className="email"
                     placeholder="Enter your email"
                     required onChange={(e)=>{e.preventDefault(); setEmail(e.target.value)}}
+                />
+                <label htmlFor="confirmPassword">
+                    Enter Phone Number:
+                </label>
+                  <input
+                    type="number"
+                    id="number"
+                    name="number"
+                    className="number"
+                    placeholder="Enter your Phone Number"
+                    required
+                    minLength={4} onChange={(e)=>{e.preventDefault();setPhonenumber(e.target.value)}}
                 />
     
 
