@@ -9,6 +9,7 @@ import Footer from './Component/Footer'
 import Demo from './Component/Demo';
 import {BrowserRouter} from "react-router-dom";
 import UserProvider from './Component/UserProvider';
+import ErrorBoundary from './Component/ErrorBoundary';
 function App() {
   const [activepage,setActive]=useState("default");
   
@@ -16,12 +17,14 @@ function App() {
   return (
     <>
     <BrowserRouter>
+    <ErrorBoundary>
     <UserProvider> 
       
     <NavBar onLinkclick={setActive}/>
     <Core currentPage={activepage}/>
     <Footer/> 
     </UserProvider>
+    </ErrorBoundary>
     </BrowserRouter>
     {/* <Demo/> */}
     </>

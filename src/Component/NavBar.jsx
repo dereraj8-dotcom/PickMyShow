@@ -4,6 +4,7 @@ import {UserContext} from './UserProvider';
 import { useContext } from 'react';
 function NavBar({onLinkclick}){
     const {user} =useContext(UserContext);
+    // const userDetail = (null);                                     ERRORBOUNDARY
     return(
     <>
    <nav className="navbar">
@@ -11,6 +12,7 @@ function NavBar({onLinkclick}){
 
         <ul className="nav-links">
             <li>{user.username}</li> 
+            {/* <li> {userDetail.name}</li>                           ERRORBOUNDARY */}
             <li><Link to ="/">Home</Link></li>
             <li><Link to ="/Movies">Movies</Link></li>
             <li><Link to ="/Theatres" >Theatres</Link></li>
